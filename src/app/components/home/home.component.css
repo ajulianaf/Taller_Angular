@@ -1,0 +1,50 @@
+.home-container {
+    background-color: #fdfdfd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .carousel-item img {
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  
+  .carousel-caption h5 {
+    color: #ffd369;
+    font-weight: bold;
+  }
+  
+  .productos-destacados h2 {
+    color: #004080;
+    font-weight: bold;
+  }
+  
+  .card-title {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .card-text {
+    color: #666;
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .mision {
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  .mision h2 {
+    color: #004080;
+    font-weight: bold;
+  }
+  

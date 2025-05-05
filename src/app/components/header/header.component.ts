@@ -1,11 +1,23 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']
 })
-export class HeaderComponent {
 
+export class HeaderComponent {
+  terminoBusqueda: string = '';
+  constructor(private router: Router) { }
+
+  buscarProducto() {
+    if (this.terminoBusqueda.trim() ) {
+      this.router.navigate(['/buscar'],{ queryParams: {q: this.terminoBusqueda}});
+    }
+  }
 }

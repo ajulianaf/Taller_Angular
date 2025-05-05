@@ -1,10 +1,48 @@
-.navbar {
-    padding: 1rem 2rem;
-  }
-  .navbar-brand {
-    font-weight: bold;
-    color: #0056b3;
-  }
-  .btn-outline-primary {
-    margin-right: 1rem;
-  }
+/* Fondo premium */
+.bg-premium {
+  background-color: #1c1c1c;
+}
+
+/* Marca elegante */
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #f5c56f;
+}
+
+/* Botón dorado */
+.btn-gold {
+  background-color: transparent;
+  border: 2px solid #f5c56f;
+  color: #f5c56f;
+  border-radius: 25px;
+  padding: 6px 20px;
+  transition: all 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-color: #f5c56f;
+  color: #1c1c1c;
+}
+
+/* Navbar links */
+.navbar-dark .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover {
+  color: #f5c56f;
+}
+
+/*Motor de busqueda*/
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #1c1c1c;
+  border-radius: 25px;
+  padding: 5px 10px;
+  margin-left: auto;
+}
+
