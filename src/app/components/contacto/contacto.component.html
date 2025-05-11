@@ -1,0 +1,63 @@
+<div class="contacto-container">
+    <h2 class="titulo-contacto">Contáctanos</h2>
+    <p>¿Tienes alguna duda, comentario o sugerencia sobre nuestros productos? ¡Nos encantaría saber de ti!</p>
+    
+    <form class="formulario-contacto">
+      <!-- Campo de Nombre -->
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+      </div>
+  
+      <!-- Campo de Correo Electrónico -->
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" placeholder="tucorreo@example.com" required>
+      </div>
+  
+      <!-- Campo de Teléfono -->
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono (opcional)</label>
+        <input type="tel" class="form-control" id="telefono" placeholder="Tu número de teléfono">
+      </div>
+  
+      <!-- Selección de Producto -->
+      <div class="mb-3">
+        <label for="producto" class="form-label">¿Qué producto te interesa?</label>
+        <select class="form-control" id="producto" required>
+          <option value="">Selecciona un producto</option>
+          <option value="vino">Vino</option>
+          <option value="cerveza">Cerveza artesanal</option>
+          <option value="whisky">Whisky</option>
+          <option value="ron">Ron</option>
+          <option value="tequila">Tequila</option>
+          <option value="otros">Otros</option>
+        </select>
+      </div>
+  
+      <!-- Campo de Mensaje -->
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+      </div>
+  
+      <!-- Opción de Boletín -->
+      <div class="mb-3">
+        <label for="boletin" class="form-label">¿Te gustaría recibir nuestras novedades y promociones?</label>
+        <div>
+          <input type="checkbox" id="boletin" class="form-check-input">
+          <label for="boletin" class="form-check-label">Sí, quiero suscribirme</label>
+        </div>
+      </div>
+  
+      <!-- Campo de Fecha de Nacimiento (opcional) -->
+      <div class="mb-3">
+        <label for="fecha-nacimiento" class="form-label">Fecha de nacimiento (opcional)</label>
+        <input type="date" class="form-control" id="fecha-nacimiento">
+      </div>
+  
+      <!-- Botón de Enviar -->
+      <button type="submit" class="btn btn-gold">Enviar</button>
+    </form>
+  </div>
+  

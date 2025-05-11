@@ -1,0 +1,91 @@
+.contacto-container {
+    background-color: var(--color-dark);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    max-width: 700px;
+    margin: 40px auto;
+    color: var(--color-light);
+    font-family: 'DM Serif Text', serif;
+  }
+  
+  .titulo-contacto {
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+  
+  .contacto-container p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+  }
+  
+  .formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-label {
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .form-control,
+  select,
+  textarea {
+    background-color: transparent;
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: var(--color-light);
+    font-size: 1rem;
+    font-family: 'DM Serif Text', serif;
+  }
+  
+  .form-control::placeholder,
+  textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .form-control:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .form-check-input {
+    accent-color: var(--color-secondary);
+    transform: scale(1.2);
+    margin-right: 8px;
+  }
+  
+  .form-check-label {
+    color: var(--color-light);
+    font-size: 0.95rem;
+  }
+  
+  .btn-gold {
+    align-self: flex-end;
+    background-color: transparent;
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'DM Serif Text', serif;
+  }
+  
+  .btn-gold:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+  }
+  
