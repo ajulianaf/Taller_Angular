@@ -23,7 +23,7 @@ export class PromocionesComponent {
     {
       titulo: 'Pack Premium',
       descripcion: 'Colección completa de licores premium con 20% de descuento',
-      imagen: 'assets/img/promo-premium.jpg',
+      imagen: 'assets/Promociones/PackPremiun.jpg',
       precio: 299.99,
       precioDescuento: 239.99,
       fechaFin: new Date('2024-12-31')
@@ -31,7 +31,7 @@ export class PromocionesComponent {
     {
       titulo: 'Oferta Clásica',
       descripcion: '3 botellas de nuestra colección clásica al precio de 2',
-      imagen: 'assets/img/promo-clasica.jpg',
+      imagen: 'assets/Promociones/oferta clasica.jpg',
       precio: 180.00,
       precioDescuento: 120.00,
       fechaFin: new Date('2024-06-30')
@@ -39,7 +39,7 @@ export class PromocionesComponent {
     {
       titulo: 'Edición Limitada',
       descripcion: 'Licor artesanal de edición limitada con regalo exclusivo',
-      imagen: 'assets/img/promo-limitada.jpg',
+      imagen: 'assets/Promociones/artesanal.jpg',
       precio: 89.99,
       precioDescuento: 69.99,
       fechaFin: new Date('2024-05-15')
