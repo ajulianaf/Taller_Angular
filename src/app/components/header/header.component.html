@@ -4,13 +4,15 @@
       <a class="navbar-brand" [routerLink]="['/']">
         <h1>Elixir Selecto</h1>
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/colecciones']" routerLinkActive="active">Colecciones</a>
@@ -21,9 +23,20 @@
           <li class="nav-item">
             <a class="nav-link" [routerLink]="['/contacto']" routerLinkActive="active">Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/carrito']" routerLinkActive="active">
+              <i class="bi bi-cart3"></i> Carrito
+            </a>
+          </li>
         </ul>
-        <div class="search-bar ms-3">
-          <input type="text" class="form-control" placeholder="Buscar..." [(ngModel)]="terminoBusqueda">
+
+        <div class="search-bar ms-3 d-flex align-items-center">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar..."
+            [(ngModel)]="terminoBusqueda"
+          />
           <button class="btn btn-gold ms-2" (click)="buscarProducto()">
             <i class="bi bi-search"></i>
           </button>
@@ -32,5 +45,3 @@
     </div>
   </nav>
 </header>
- 
-

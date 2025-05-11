@@ -1,0 +1,35 @@
+<div class="carrito-container">
+    <h2>Tu Carrito</h2>
+  
+    <div *ngIf="carrito.length > 0; else vacio">
+      <div class="producto" *ngFor="let producto of carrito">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}" />
+        <div class="info">
+          <h3>{{ producto.nombre }}</h3>
+          <p>Precio: ${{ producto.precio }}</p>
+          <input 
+            type="number" 
+            [value]="producto.cantidad" 
+            (input)="actualizarCantidad($event, producto)" 
+            min="1" 
+            [attr.max]="producto.cantidad < 999 ? 999 : null" 
+          />
+        </div>
+        <div class="subtotal">
+          Subtotal: ${{ (producto.precio * producto.cantidad).toFixed(2) }}
+        </div>
+        <button (click)="eliminarProducto(producto)">Eliminar</button>
+      </div>
+  
+      <div class="total">
+        <strong>Total: ${{ total.toFixed(2) }}</strong>
+      </div>
+  
+      <button class="pagar" (click)="finalizarCompra()">Finalizar compra</button>
+    </div>
+  
+    <ng-template #vacio>
+      <p>Tu carrito está vacío.</p>
+    </ng-template>
+  </div>
+  
