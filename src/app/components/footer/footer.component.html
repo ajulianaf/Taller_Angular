@@ -1,32 +1,37 @@
-<footer class="bg-dark text-light pt-4 pb-2 mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-3">
-          <h5>Elixir Selecto</h5>
-          <p>Licorería artesanal premium con sabores únicos y exquisitos.</p>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5>Enlaces rápidos</h5>
-          <ul class="list-unstyled">
-            <li><a routerLink="/" class="text-light">Inicio</a></li>
-            <li><a routerLink="/productos" class="text-light">Colecciones</a></li>
-            <li><a routerLink="/promociones" class="text-light">Promociones</a></li>
-            <li><a routerLink="/nosotros" class="text-light">Nosotros</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-3">
-          <h5>Contacto</h5>
-          <p>Email: contacto&#64;elixirselecto.com</p>
-          <p>Teléfono: +57 300 123 4567</p>
-          <div class="mt-2">
-            <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-light"><i class="bi bi-twitter-x"></i></a>
-          </div>
-        </div>
+<footer class="footer">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 text-center mb-4">
+        <h5>Licores Artesanales</h5>
+        <p>Descubre el arte de la destilación artesanal con nuestras exclusivas colecciones.</p>
       </div>
-      <hr class="bg-secondary">
-      <p class="text-center mb-0">&copy; 2025 Elixir Selecto. Todos los derechos reservados.</p>
+      <div class="col-md-4 text-center mb-4">
+        <h5>Enlaces Rápidos</h5>
+        <ul class="list-unstyled">
+          <li><a [routerLink]="['/']">Inicio</a></li>
+          <li><a [routerLink]="['/colecciones']">Colecciones</a></li>
+          <li><a [routerLink]="['/promociones']">Promociones</a></li>
+          <li><a [routerLink]="['/contacto']">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 text-center mb-4">
+        <h5>Contacto</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-geo-alt"></i> Calle Principal 123</li>
+          <li><i class="bi bi-telephone"></i> (123) 456-7890</li>
+          <li><i class="bi bi-envelope"></i> infoelixirselecto.com</li>
+          <li class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </footer>
+    <hr>
+    <div class="text-center">
+      <p>&copy; 2024 Licores Artesanales. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
   

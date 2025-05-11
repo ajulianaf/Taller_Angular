@@ -1,16 +1,29 @@
 <div class="container mt-4">
-    <h2>Colecciones Exclusivas</h2>
-    <div class="row">
-      <div *ngFor="let product of products" class="col-md-4 mb-3">
-        <div class="card">
-          <img [src]="product.imageUrl" class="card-img-top" alt="{{ product.name }}">
-          <div class="card-body">
-            <h5 class="card-title">{{ product.name }}</h5>
-            <p class="card-text">{{ product.price | currency:'COP' }}</p>
-            <button class="btn btn-primary" (click)="addToCart(product)">Añadir al Carrito</button>
-          </div>
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Buscar productos..." [(ngModel)]="searchQuery">
+        <button class="btn btn-primary" (click)="onSearch()">
+          <i class="bi bi-search"></i> Buscar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let product of products">
+      <div class="card h-100">
+        <img [src]="product.imageUrl" class="card-img-top" [alt]="product.name">
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <p class="card-text">{{ product.description }}</p>
+          <p class="card-text"><strong>${{ product.price | number:'1.2-2' }}</strong></p>
+          <button class="btn btn-primary" (click)="addToCart(product)">
+            <i class="bi bi-cart-plus"></i> Añadir al Carrito
+          </button>
         </div>
       </div>
     </div>
   </div>
+</div>
   

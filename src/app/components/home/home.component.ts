@@ -1,11 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  products: Product[] = [];
 
+  constructor(private productService: ProductService) {}
+
+  ngOnInit(): void {
+    this.loadProducts();
+  }
+
+  private loadProducts(): void {
+    this.productService.getProducts().subscribe(products => {
+      this.products = products;
+    });
+  }
+
+  addToCart(product: Product): void {
+    console.log('Producto añadido al carrito:', product);
+    // Aquí se implementará la lógica para añadir al carrito
+  }
 }

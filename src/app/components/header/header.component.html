@@ -1,15 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-premium shadow-sm fixed-top px-4">
-  <a class="navbar-brand" routerLink="/">Elixir Selecto</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><a class="nav-link" routerLink="/">Inicio</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/productos">Colecciones</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/promociones">Promociones</a></li>
-      <li class="nav-item"><a class="nav-link" routerLink="/nosotros">Nosotros</a></li>
-    </ul>
-
+<header class="bg-premium">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/']">
+        <h1>Elixir Selecto</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/colecciones']" routerLinkActive="active">Colecciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/promociones']" routerLinkActive="active">Promociones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contacto']" routerLinkActive="active">Contacto</a>
+          </li>
+        </ul>
+        <div class="search-bar ms-3">
+          <input type="text" class="form-control" placeholder="Buscar..." [(ngModel)]="terminoBusqueda">
+          <button class="btn btn-gold ms-2" (click)="buscarProducto()">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+ 
 

@@ -1,50 +1,232 @@
-.home-container {
-    background-color: #fdfdfd;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .carousel-item img {
-    max-height: 500px;
+/* Estilos generales */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    color: var(--color-primary);
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    color: var(--color-light);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-buttons .btn {
+    margin: 0 0.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilos para la sección de características */
+.features {
+    padding: 4rem 0;
+    background-color: var(--color-light);
+}
+
+.features h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    color: var(--color-text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+}
+
+/* Estilos para productos destacados */
+.productos-destacados {
+    padding: 4rem 0;
+    background-color: var(--color-gray);
+}
+
+.productos-destacados h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.producto-card:hover {
+    transform: translateY(-10px);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 250px;
     object-fit: cover;
-  }
-  
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 0.5rem;
-    padding: 1rem;
-  }
-  
-  .carousel-caption h5 {
-    color: #ffd369;
+}
+
+.producto-card h3 {
+    color: var(--color-text-dark);
+    font-size: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.producto-card p {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    padding: 0 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.producto-card .btn {
+    margin: 0 auto 1.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+/* Estilos para promociones */
+.promociones-section {
+    padding: 4rem 0;
+    background-color: var(--color-light);
+}
+
+.promociones-section h2 {
+    color: var(--color-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
     font-weight: bold;
-  }
-  
-  .productos-destacados h2 {
-    color: #004080;
-    font-weight: bold;
-  }
-  
-  .card-title {
-    color: #333;
-    font-weight: 600;
-  }
-  
-  .card-text {
-    color: #666;
-  }
-  
-  .card img {
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .mision {
-    background-color: #f8f9fa;
-    color: #333;
-  }
-  
-  .mision h2 {
-    color: #004080;
-    font-weight: bold;
-  }
-  
+}
+
+.promociones-section p {
+    color: var(--color-text-dark);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.promociones-section ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.promociones-section ul li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+
+.promociones-section img {
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.promociones-section img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    .features, .productos-destacados, .promociones-section {
+        padding: 3rem 0;
+    }
+
+    .feature-card, .producto-card {
+        margin-bottom: 2rem;
+    }
+
+    .producto-card img {
+        height: 200px;
+    }
+
+    .promociones-section img {
+        margin-top: 2rem;
+    }
+}

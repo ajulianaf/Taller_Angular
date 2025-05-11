@@ -1,21 +1,48 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductService, Product } from '../../services/product.service';
+import { FormsModule } from '@angular/forms';
+import { ProductService } from '../../services/product.service';
+import { Product } from '../../models/product.model';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styles: [`
+    .card {
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+  `]
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
+  searchQuery: string = '';
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe((products) => {
+    this.loadProducts();
+  }
+
+  loadProducts(): void {
+    this.productService.getProducts().subscribe(products => {
+      this.products = products;
+    });
+  }
+
+  onSearch(): void {
+    if (this.searchQuery.trim() === '') {
+      this.loadProducts();
+      return;
+    }
+
+    this.productService.searchProducts(this.searchQuery).subscribe(products => {
       this.products = products;
     });
   }

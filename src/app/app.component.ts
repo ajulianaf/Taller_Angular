@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
 import { RouterOutlet } from '@angular/router';
-import { FooterComponent } from "./components/footer/footer.component";
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, RouterOutlet, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'Licores Artesanales';
+}

@@ -1,42 +1,45 @@
 /* Fondo premium */
 .bg-premium {
-  background-color: #1c1c1c;
+  background-color: var(--color-dark);
 }
 
 /* Marca elegante */
-.brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  color: #f5c56f;
+.navbar-brand h1 {
+  font-family: 'DM Serif Text', serif;
+  color: var(--color-secondary);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  margin: 0;
 }
 
 /* Botón dorado */
 .btn-gold {
   background-color: transparent;
-  border: 2px solid #f5c56f;
-  color: #f5c56f;
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
   border-radius: 25px;
   padding: 6px 20px;
   transition: all 0.3s ease;
 }
 
 .btn-gold:hover {
-  background-color: #f5c56f;
-  color: #1c1c1c;
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
 }
 
 /* Navbar links */
-.navbar-dark .nav-link {
-  color: rgba(255, 255, 255, 0.85);
+.navbar-nav .nav-link {
+  color: var(--color-light);
   margin-left: 1rem;
   transition: color 0.3s ease;
 }
 
-.navbar-dark .nav-link:hover {
-  color: #f5c56f;
+.navbar-nav .nav-link:hover {
+  color: var(--color-secondary);
 }
 
-/*Motor de busqueda*/
+/* Motor de búsqueda */
 .search-bar {
   display: flex;
   align-items: center;
@@ -44,5 +47,49 @@
   border-radius: 25px;
   padding: 5px 10px;
   margin-left: auto;
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-light);
+  padding: 5px 10px;
+}
+
+.search-bar input:focus { 
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-secondary);
+  color: var(--color-light);
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--color-dark);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajuste para el contenido principal */
+main {
+  padding-top: 80px; /* Altura del header */
+  min-height: calc(100vh - 80px); /* Altura total menos el header */
+  display: flex;
+  flex-direction: column;
+}
+
+.header h1 {
+    font-family: 'DM Serif Text', serif;
+    font-size: 300px;
+    margin: 0;
+    color: var(--color-primary);
+    font-weight: 800;
+    font-style: italic;
 }
 

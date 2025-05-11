@@ -1,0 +1,79 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <h1>Promociones Especiales</h1>
+    <p>Descubre nuestras ofertas exclusivas y ahorra en tus licores favoritos</p>
+  </div>
+</section>
+
+<!-- Promociones Grid -->
+<section class="promociones-grid">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let promo of promociones">
+        <div class="promo-card">
+          <div class="promo-badge">Oferta</div>
+          <img [src]="promo.imagen" [alt]="promo.titulo">
+          <div class="promo-info">
+            <h3>{{promo.titulo}}</h3>
+            <p>{{promo.descripcion}}</p>
+            <div class="precios">
+              <span class="precio-original">${{promo.precio | number:'1.2-2'}}</span>
+              <span class="precio-descuento">${{promo.precioDescuento | number:'1.2-2'}}</span>
+            </div>
+            <div class="fecha-fin">
+              <i class="bi bi-clock"></i>
+              Válido hasta: {{promo.fechaFin | date:'dd/MM/yyyy'}}
+            </div>
+            <button class="btn btn-gold mt-3">Aprovechar Oferta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección de Beneficios -->
+<section class="benefits-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Beneficios Exclusivos</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="bi bi-percent"></i>
+          </div>
+          <h3>Descuentos VIP</h3>
+          <p>Accede a descuentos exclusivos en todas nuestras colecciones premium</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="bi bi-truck"></i>
+          </div>
+          <h3>Envío Gratis</h3>
+          <p>Entrega sin costo en todas tus compras superiores a $100</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="bi bi-gift"></i>
+          </div>
+          <h3>Regalos Especiales</h3>
+          <p>Recibe obsequios exclusivos con cada compra premium</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <i class="bi bi-star"></i>
+          </div>
+          <h3>Acceso Anticipado</h3>
+          <p>Sé el primero en conocer nuestras nuevas ediciones limitadas</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
