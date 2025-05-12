@@ -20,8 +20,11 @@ export class HeaderComponent {
 
   constructor(private router: Router) {}
 
-  buscarProducto(): void {
-    console.log('Buscando:', this.terminoBusqueda);
-    // Aquí se implementará la lógica de navegación o filtrado
+buscarProducto(): void {
+  if (this.terminoBusqueda.trim()) {
+    this.router.navigate(['/colecciones'], {
+      queryParams: { q: this.terminoBusqueda }
+    });
   }
+}
 }

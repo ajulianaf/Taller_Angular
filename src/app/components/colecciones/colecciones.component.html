@@ -3,63 +3,28 @@
   <div class="container">
     <h1>Nuestras Colecciones</h1>
     <p>Descubre nuestras exclusivas colecciones de licores artesanales</p>
-  </div> 
+  </div>
 </section>
 
 <!-- Colecciones Grid -->
 <section class="colecciones-grid">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 mb-4">
+      <div *ngFor="let coleccion of coleccionesFiltradas" class="col-md-4 mb-4">
         <div class="coleccion-card">
-          <img src="assets/colecciones/Premium.jpg" alt="Colección Premium">
+          <img [src]="coleccion.imagen" [alt]="coleccion.nombre">
           <div class="coleccion-info">
-            <h3>Colección Premium</h3>
-            <p>Licores artesanales de edición limitada</p>
+            <h3>{{ coleccion.nombre }}</h3>
+            <p>{{ coleccion.descripcion }}</p>
             <a [routerLink]="['/']" class="btn btn-gold">Volver al Inicio</a>
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="coleccion-card">
-          <img src="assets/colecciones/Clasica.jpg" alt="Colección Clásica">
-          <div class="coleccion-info">
-            <h3>Colección Clásica</h3>
-            <p>Sabores tradicionales con toque moderno</p>
-            <a [routerLink]="['/']" class="btn btn-gold">Volver al Inicio</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="coleccion-card">
-          <img src="assets/colecciones/Frutal.jpg" alt="Frutal">
-          <div class="coleccion-info">
-            <h3>Colección Frutal</h3>
-            <p>Licores naturales con frutas selectas</p>
-            <a [routerLink]="['/']" class="btn btn-gold">Volver al Inicio</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="coleccion-card">
-          <img src="assets/colecciones/Especiales.jpg" alt="Colección Especias">
-          <div class="coleccion-info">
-            <h3>Colección Especias</h3>
-            <p>Mezclas exóticas y aromáticas</p>
-            <a [routerLink]="['/']" class="btn btn-gold">Volver al Inicio</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4">
-        <div class="coleccion-card">
-          <img src="assets/colecciones/Edicion.jpg" alt="Edición Limitada">
-          <div class="coleccion-info">
-            <h3>Edición Limitada</h3>
-            <p>Creaciones exclusivas y numeradas</p>
-            <a [routerLink]="['/']" class="btn btn-gold">Volver al Inicio</a>
-          </div>
-        </div>
-      </div>
+    </div>
+
+    <!-- Mensaje si no hay resultados -->
+    <div *ngIf="coleccionesFiltradas.length === 0" class="text-center mt-5">
+      <h4>No se encontraron resultados para "{{ terminoBusqueda }}"</h4>
     </div>
   </div>
 </section>
